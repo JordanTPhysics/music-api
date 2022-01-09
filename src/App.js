@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, {Component} from 'react';
+
+class App extends Component{
+    constructor(props){
+super(props);
+
+this.state={
+    newItem:"",
+    list:[]
+        }
+    }
+    updateInput(key, value){
+
+    }
+    addItem(){
+        const newItem={
+            id: 1+Math.random(),
+            value: this.state.newItem.slice()
+        };
+        const list = {...this.state.list};
+
+        list.push(newItem);
+
+        this.setState({
+            list,
+            newItem:""
+        })
+    }
+    render(){
+        return(
+            <div className='App'>
+                Yeehaw
+                <div>
+                
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
