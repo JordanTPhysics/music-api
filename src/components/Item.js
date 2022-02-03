@@ -1,7 +1,16 @@
 
-import './Item.css'
+import './Item.css';
+import React, { useState } from 'react';
 
-function Item(props){
+const Item = (props) =>{
+    const [desc, setDesc] = useState(props.desc);
+
+    
+
+    const clickHandler = () =>{
+        setDesc('A new description');
+        console.log(desc)
+    };
     
     return(
     <div className="Item">
@@ -14,6 +23,7 @@ function Item(props){
         <div className="Price">
         £{props.price}
         </div>
+        <button onClick={clickHandler}>Update</button>
     </div>
 );
 }

@@ -11,9 +11,17 @@ background-size: cover;
 background-position: center;
 }
 .Main{
-    position: absolute;
+    position: relative;
     flex-grow: initial;
     color: crimson;
     align-self: center;
 }
-
+:root{
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --text-primary: white;
+    --text-secondary: black;
+}
+.body{
+margin-left: 5rem;
+}
